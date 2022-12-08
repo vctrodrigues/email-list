@@ -1,11 +1,17 @@
 <template>
-  <div class="app-sidebar app-pa--xxxs">
-    <img src="" alt="logotipo" />
+  <div
+    class="app-sidebar app-pa--xxxs app-pt--xl app-pr--xl app-br--hairline app-bc--grey-300"
+  >
+    <img
+      src="https://cleancloud.io/wp-content/uploads/CleanCloud_Logo.svg"
+      alt="logotipo"
+      class="app-sidebar__logo"
+    />
     <NuxtLink to="/" class="app-sidebar__link app-mt--sm">
-      <Button ghost>Create emails</Button>
+      <Button secondary>Create emails</Button>
     </NuxtLink>
     <NuxtLink to="/emails" class="app-sidebar__link app-mt--xxxs">
-      <Button ghost>Email list</Button>
+      <Button secondary>Email list</Button>
     </NuxtLink>
   </div>
 </template>
@@ -18,6 +24,10 @@
   .app-sidebar__link {
     text-decoration: none;
     color: inherit;
+  }
+
+  .app-sidebar__logo {
+    width: 160px;
   }
 }
 </style>
