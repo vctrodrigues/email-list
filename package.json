@@ -11,7 +11,8 @@
     "nuxt": "3.0.0"
   },
   "dependencies": {
-    "@cleancloud/design-system": "^1.4.3",
+    "@cleancloud/design-system": "^1.4.4",
+    "@pinia/nuxt": "^0.4.6",
     "sass": "^1.56.1",
     "sass-loader": "^13.2.0",
     "vue-i18n": "^9.2.2"

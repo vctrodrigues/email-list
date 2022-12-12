@@ -2,4 +2,5 @@
 export default defineNuxtConfig({
   plugins: ["@/plugins/design-system.ts"],
   css: ["@cleancloud/design-system/styles.css"],
+  modules: ["@pinia/nuxt"],
 });

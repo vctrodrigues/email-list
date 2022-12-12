@@ -1,18 +1,19 @@
 <script lang="ts" setup>
-import { Button, Textfield } from "@cleancloud/design-system";
+import { AlertBar, Button, Textfield } from "@cleancloud/design-system";
+import { useEmailStore } from "@/store/email";
 
 const email = ref<string>("");
+const active = ref<boolean>(false);
 
-const emit = defineEmits<{
-  (e: "add:email", v: string): void;
-}>();
+const { addEmail } = useEmailStore();
 
 function onAdd() {
   if (!email.value) {
     return;
   }
 
-  emit("add:email", email.value);
+  addEmail(email.value);
+  active.value = true;
   email.value = "";
 }
 </script>
@@ -25,6 +26,8 @@ function onAdd() {
       placeholder="Type email address here"
     />
     <Button :disabled="!email" @click="onAdd">Add</Button>
+
+    <AlertBar v-model="active" info light>Ok! Email added.</AlertBar>
   </div>
 </template>
 

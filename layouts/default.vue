@@ -1,5 +1,6 @@
 <template>
   <main class="app-default-layout">
+    <div class="app-alerts-container"></div>
     <AppSidebar />
     <NuxtPage />
   </main>

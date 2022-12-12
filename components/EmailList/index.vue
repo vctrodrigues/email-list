@@ -1,16 +1,15 @@
 <script lang="ts" setup>
 import { Button, Span } from "@cleancloud/design-system";
+import { useEmailStore } from "@/store/email";
+
+const { removeEmail } = useEmailStore();
 
 const props = defineProps<{
   emails: string[];
 }>();
 
-const emit = defineEmits<{
-  (e: "remove:email", v: number): void;
-}>();
-
 function onRemove(index: number) {
-  emit("remove:email", index);
+  removeEmail(index)
 }
 </script>
 
